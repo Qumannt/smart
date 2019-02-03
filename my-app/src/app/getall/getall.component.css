@@ -1,0 +1,153 @@
+    nz-select {
+       margin-right: 8px;
+     }
+     .to25{
+       margin-top: 25px;
+     }
+     nz-range-picker{
+       border-radius: 0;
+     }
+      app-getall{
+        width: 100%;
+      }
+      .ant-layout, .ant-layout * {
+          box-sizing: unsets;
+      }
+      .ant-input-affix-wrapper {
+        width: auto;
+      }
+      .ant-input-lg {
+          padding: 6px 11px;
+          height: auto;
+          font-size: 12px;
+      }
+        .ant-btn-lg {
+          height: 34px;
+      }
+      .ant-list-split .ant-list-item {
+      border: 2px solid #34a77c;
+      border-radius: 20px;
+      width: 65%;
+      margin-left: 10px;
+  }
+    .special_margin{
+      margin-right: 8px;
+      margin-bottom: 12px;
+    }
+
+    .margin_button{
+          margin-left: 6px;
+
+    }
+    .ant-select-selection {
+    border-radius: 4px 0 0 4px;
+
+    }
+
+    .ant-input {
+    border-radius: 0px;
+
+    }
+    .ant-btn-primary {
+        background-color: #00b741;
+        border-color: #00b741;
+    }
+
+
+    .col-lg-8 .ant-btn-primary {
+        background-color: #1890ff;
+        border-color: #1890ff;
+    }
+
+
+    .box_shad{
+      box-shadow: 0 0 0px 2px #00b741;
+    }
+
+
+
+
+    /* div */
+
+
+
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-left: 15px;
+  }
+.align-items-center {
+    align-items: center !important;
+    box-shadow: 0 0 10px #00b741;
+        border-radius: 10px;
+        margin-top: 15px;
+}
+
+.col-lg-6 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.col-lg-7 {
+    flex: 0 0 50%;
+    max-width: 30%;
+}
+.col-lg-8 {
+    flex: 0 0 50%;
+    max-width: 30%;
+}
+.col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 40%;
+}
+.ant-rate {
+        font-size: 12px;
+      }
+      h2, p
+      {
+    margin-bottom: 0em;
+}
+.ant-btn-background-ghost {
+    background: #b1b1b161;
+    border-color: #fff;
+    color: #04a53d;
+}
+
+
+
+agm-map {
+    height: 50%;
+    width: 90%;
+}
+
+
+/* progress */
+
+
+.progress-inner {
+    min-width: 15%;
+    white-space: nowrap;
+    font-size: 20px;
+    height: 3em;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 0.7em;
+    border-radius: 10px;
+}
+.progress-outer {
+    width: 96%;
+    background-color: #0000001f;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}

@@ -1,0 +1,209 @@
+<nz-layout>
+        <nz-header style="background: #e0e0e0; width:100%; text-align:center; ">
+
+
+          <div>
+            <nz-select style="width: 200px; border-radius: 4px 0 0 4px; color: #0b51d4;" class="box_shad" nzShowSearch nzAllowClear nzPlaceHolder="Выберите условия" [(ngModel)]="selectedValue">
+      <nz-option nzLabel="1 номер, 1 посетитель" nzValue="1"></nz-option>
+      <nz-option nzLabel="1 номер, 2 посетителя" nzValue="2"></nz-option>
+      <nz-option nzLabel="1 номер, 3 посетителя" nzValue="3"></nz-option>
+
+    </nz-select>
+
+
+
+
+
+
+
+    <nz-range-picker class="box_shad" style="color: #0b51d4;"
+[nzRanges]="ranges1"
+ngModel
+(ngModelChange)="onChange($event)"
+></nz-range-picker>
+
+
+
+
+
+
+
+        <nz-input-group style="border-radius: 0 4px 4px 0; color: #0b51d4;" class="box_shad" nzSearch nzSize="large"  [nzSuffix]="suffixIconButton">
+    <input placeholder="Город" nz-input [(ngModel)]="inputValue" (input)="onInput($event.target?.value)" [nzAutocomplete]="auto"/>
+  </nz-input-group><ng-template #suffixIconButton>
+  <button nz-button nzType="primary" nzSize="large" nzSearch><i nz-icon type="search" theme="outline"></i></button>
+</ng-template>
+<nz-autocomplete [nzDataSource]="filteredOptions" #auto>
+      </nz-autocomplete>
+
+
+
+</div>
+        </nz-header>
+
+<div style="margin-top:15px; margin-left:20px;">
+
+  <div style="width:100%;display: flex;">
+    <div style="width:10%;">
+      <div class="progress-outer" ><div class="progress-inner" style="width: 45%;background-color: rgb(0, 183, 65);"> 45%</div></div>
+    </div>
+    <div style="width:60%;    margin-left: 10px;">
+<h2>Отели в Самарканде</h2>
+<p>Доступно 12 из 36 отелей на выбраные даты</p>
+    </div>
+    <div style="width:30%;text-align: center;margin-top: 3.5em;">
+<nz-switch   nzSize="small" [ngModel]="true"> </nz-switch> Поиск по карте
+    </div>
+  </div>
+
+  </div>
+
+<div style="margin-top:10px; margin-left:20px;     text-align: center;">
+        <div slyle="width:100%" >
+
+
+         <button style="color: #0b51d4;" class="margin_button"  nz-button  nzType="default" (click)="isCollapsed=!isCollapsed">Рекомендуемые  <i nz-icon [type]="isCollapsed?'down':'up'"></i></button>
+    <button style="color: #0b51d4;" class="margin_button"  (click)="isCollapsed=!isCollapsed" nz-button nzType="default">Оценка  <i nz-icon [type]="isCollapsed?'down':'up'"></i></button>
+  <button style="color: #0b51d4;" class="margin_button"  (click)="isCollapsed=!isCollapsed" nz-button nzType="default">Кол-во звезд <i nz-icon [type]="isCollapsed?'down':'up'"></i></button>
+  <button style="color: #0b51d4;" class="margin_button"  (click)="isCollapsed=!isCollapsed" nz-button nzType="default">По возрастанию цены <i nz-icon [type]="isCollapsed?'down':'up'"></i></button>
+    <button  class="margin_button"  nz-button nzType="primary" (click)="createTplModal(tplTitle, tplContent, tplFooter)">
+            <i nz-icon type="filter" theme="outline"></i><span> Другие фильтры</span>
+          </button>
+
+
+        </div>
+        </div>
+
+
+
+
+    <ng-template #tplContent #tplTitle>
+      <h4>Тип зармещения</h4>
+      <div style="padding:20px; text-align:left;">
+      <nz-switch [(ngModel)]="switchValue"></nz-switch> Хостел <br>
+      <nz-switch [(ngModel)]="switchValue1"></nz-switch> Отель  <br>
+      <nz-switch [(ngModel)]="switchValue2"></nz-switch> Бутик отель  <br>
+      <nz-switch [(ngModel)]="switchValue3"></nz-switch> Мотель  <br>
+      <nz-switch [(ngModel)]="switchValue4"></nz-switch> Постель и завтрак
+      </div>
+    </ng-template>
+    <ng-template #tplFooter>
+      <button nz-button style="text-align:center" nzType="primary" (click)="destroyTplModal()" [nzLoading]="tplModalButtonLoading">Готово</button>
+    </ng-template>
+
+
+
+
+
+
+
+
+        <nz-content style="    margin-top: 15px;
+    display: flex;
+    margin-left: 20px;
+    width: 100%;">
+          <div style="    width: 60%;">
+          <div class="row align-items-center">
+<div style="padding:10px;" class="col-lg-7 about-left">
+<img   class="img-fluid" src="assets/hotel.jpg" alt="">
+</div>
+<div class="col-lg-6">
+<h2>Crocus Park</h2>
+<nz-rate [ngModel]="4" nzDisabled></nz-rate>
+<h4><i nz-icon type="wifi" theme="outline"></i><i nz-icon type="coffee" theme="outline"></i><i nz-icon type="bold" theme="outline"></i></h4>
+<p><i nz-icon type="user" theme="outline"></i> 4-х местный номер с двумя кроватями </p>
+<p><i nz-icon type="coffee" theme="outline"></i> Завтрак включён </p>
+<p><i nz-icon type="rollback" theme="outline"></i> Бесплатная отмена брони </p>
+<p style="color: #ff0b0b;">Забронировано 2 раза за последние 6 часов </p>
+</div>
+<div class="col-lg-8" style="text-align:right; padding:10px;">
+<h2 style="color:green;">450 000 USZ</h2>
+<p>за 1 ночь</p>
+<button style="background: #000" nz-button nzType="default" nzGhost>SMART SALE</button>
+<p style="color: #ff0b0b;" >Осталось 2 номера</p>
+<button style="    margin-top: 2em;" nz-button nzType="primary" >Забронировать</button>
+</div>
+</div>
+
+
+<div class="row align-items-center">
+<div style="padding:10px;" class="col-lg-7 about-left">
+<img   class="img-fluid" src="assets/hotel.jpg" alt="">
+</div>
+<div class="col-lg-6">
+<h2>Crocus Park</h2>
+<nz-rate [ngModel]="4" nzDisabled></nz-rate>
+<h4><i nz-icon type="wifi" theme="outline"></i><i nz-icon type="coffee" theme="outline"></i><i nz-icon type="bold" theme="outline"></i></h4>
+<p><i nz-icon type="user" theme="outline"></i> 4-х местный номер с двумя кроватями </p>
+<p><i nz-icon type="coffee" theme="outline"></i> Завтрак включён </p>
+<p><i nz-icon type="rollback" theme="outline"></i> Бесплатная отмена брони </p>
+<p style="color: #ff0b0b;">Забронировано 2 раза за последние 6 часов </p>
+</div>
+<div class="col-lg-8" style="text-align:right; padding:10px;">
+<h2 style="color:green;">450 000 USZ</h2>
+<p>за 1 ночь</p>
+<button style="background: #000" nz-button nzType="default" nzGhost>SMART SALE</button>
+<p style="color: #ff0b0b;" >Осталось 2 номера</p>
+<button style="    margin-top: 2em;" nz-button nzType="primary" >Забронировать</button>
+</div>
+</div>
+
+
+<div class="row align-items-center">
+<div style="padding:10px;" class="col-lg-7 about-left">
+<img   class="img-fluid" src="assets/hotel.jpg" alt="">
+</div>
+<div class="col-lg-6">
+<h2>Crocus Park</h2>
+<nz-rate [ngModel]="4" nzDisabled></nz-rate>
+<h4><i nz-icon type="wifi" theme="outline"></i><i nz-icon type="coffee" theme="outline"></i><i nz-icon type="bold" theme="outline"></i></h4>
+<p><i nz-icon type="user" theme="outline"></i> 4-х местный номер с двумя кроватями </p>
+<p><i nz-icon type="coffee" theme="outline"></i> Завтрак включён </p>
+<p><i nz-icon type="rollback" theme="outline"></i> Бесплатная отмена брони </p>
+<p style="color: #ff0b0b;">Забронировано 2 раза за последние 6 часов </p>
+</div>
+<div class="col-lg-8" style="text-align:right; padding:10px;">
+<h2 style="color:green;">450 000 USZ</h2>
+<p>за 1 ночь</p>
+<button style="background: #000" nz-button nzType="default" nzGhost>SMART SALE</button>
+<p style="color: #ff0b0b;" >Осталось 2 номера</p>
+<button style="    margin-top: 2em;" nz-button nzType="primary" >Забронировать</button>
+</div>
+</div>
+
+
+<div class="row align-items-center">
+<div style="padding:10px;" class="col-lg-7 about-left">
+<img   class="img-fluid" src="assets/hotel.jpg" alt="">
+</div>
+<div class="col-lg-6">
+<h2>Crocus Park</h2>
+<nz-rate [ngModel]="4" nzDisabled></nz-rate>
+<h4><i nz-icon type="wifi" theme="outline"></i><i nz-icon type="coffee" theme="outline"></i><i nz-icon type="bold" theme="outline"></i></h4>
+<p><i nz-icon type="user" theme="outline"></i> 4-х местный номер с двумя кроватями </p>
+<p><i nz-icon type="coffee" theme="outline"></i> Завтрак включён </p>
+<p><i nz-icon type="rollback" theme="outline"></i> Бесплатная отмена брони </p>
+<p style="color: #ff0b0b;">Забронировано 2 раза за последние 6 часов </p>
+</div>
+<div class="col-lg-8" style="text-align:right; padding:10px;">
+<h2 style="color:green;">450 000 USZ</h2>
+<p>за 1 ночь</p>
+<button style="background: #000" nz-button nzType="default" nzGhost>SMART SALE</button>
+<p style="color: #ff0b0b;" >Осталось 2 номера</p>
+<button style="    margin-top: 2em;" nz-button nzType="primary" >Забронировать</button>
+</div>
+</div>
+</div>
+<div style="    margin-top: 15px;
+    margin-left: 40px;
+    width: 40%;
+">
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</div>
+
+
+        </nz-content>
+
+      </nz-layout>

@@ -1,0 +1,112 @@
+<div style="  flex-direction: row;
+  display: flex;">
+<nz-sider  [(nzCollapsed)]="isCollapsed" >
+
+<ul style="height:100%" nz-menu [nzMode]="'vertical'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
+
+        <div class="logo">
+
+          <!-- it`s a logo company -->
+
+        <a [routerLink]="'/'"><img  src="assets/smart.png"></a>
+        <a [routerLink]="'/page3'">page3</a>
+
+
+        <p [class.display_none]="isCollapsed" class="logo_up">SmartBooking</p>
+        <p [class.display_none]="isCollapsed" class="logo_dwn">Travel Agency</p></div>
+
+
+
+     <!-- it`s toggle menu button -->
+        <i
+         class="trigger"
+         [class.isOpen]="!isCollapsed"
+         [class.isClose]="isCollapsed"
+         nz-icon [type]="isCollapsed?'right':'left'"
+         (click)="isCollapsed=!isCollapsed"></i>
+
+    <div class="prof_menu">
+
+          <nz-avatar style="margin-right: 0.4em"
+           [nzSize]="44"
+           nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" nzIcon="user"></nz-avatar>
+
+           <p  [class.display_none]="isCollapsed" class="prof_menu_up">Martin</p>
+           <a  [routerLink]="'/'" [class.display_none]="isCollapsed" class="prof_menu_dwn">Выйти</a></div>
+
+
+
+
+
+
+
+
+    <!-- LEFT  MENU -->
+
+        <li nz-menu-item style="margin-top: 2.5em;">
+          <span title>
+            <i nz-icon type="home"></i>
+            <span>Главная</span>
+          </span>
+        </li>
+        <li nz-menu-item >
+          <span title>
+            <i nz-icon type="environment" theme="fill"></i>
+            <span>Бронирование</span>
+          </span>
+        </li>
+        <li nz-menu-item >
+          <span title>
+            <i nz-icon type="schedule" theme="outline"></i>
+            <span>Заявки</span>
+          </span>
+        </li>
+        <li nz-menu-item >
+          <span title>
+            <i nz-icon type="snippets" theme="outline"></i>
+            <span>Отчеты</span>
+          </span>
+        </li>
+        <li nz-menu-item >
+          <span title>
+            <i nz-icon type="sync"></i>
+            <span>Синхронизация</span>
+          </span>
+        </li>
+        <li nz-menu-item >
+          <span title>
+            <i nz-icon type="snippets" theme="fill"></i>
+            <span>Документы</span>
+          </span>
+        </li>
+        <li nz-menu-item >
+          <span title>
+            <i nz-icon type="bank" theme="outline"></i>
+            <span>Гостинницы</span>
+          </span>
+        </li>
+        <li nz-menu-item >
+          <span title>
+            <i nz-icon type="setting" theme="fill"></i>
+            <span>Настройки</span>
+          </span>
+        </li>
+        <li nz-menu-item style="margin-top: 2.5em;">
+          <span title>
+            <i  nz-icon type="mail" theme="fill" ></i>
+            <span>Сообщения</span>
+          </span>
+        </li>
+        <li nz-menu-item >
+          <span title>
+            <i nz-icon type="wechat" theme="fill"></i>
+            <span>Отзывы</span>
+          </span>
+        </li>
+      </ul>
+</nz-sider>
+
+
+          <router-outlet></router-outlet>
+<!-- end standart 'zorro' template -->
+</div>

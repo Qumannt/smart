@@ -1,0 +1,135 @@
+  body{
+      color: rgb(255, 255, 255);
+        
+}
+
+/* ANTD MENU */
+
+  .ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+    background: #212331;
+}
+  .ant-menu-dark .ant-menu-item-selected {
+    color: #37a294;
+    font-weight: 600;
+}
+  ui{
+      color:  rgb(255, 255, 255);
+      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+
+}
+  .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected, .ant-menu.ant-menu-dark .ant-menu-item-selected {
+      background-color: #ffffff00;
+}
+  .ant-avatar {
+      margin-bottom: 0.1em;
+      right: 0.4em;
+  }
+  .ant-layout.ant-layout-has-sider {
+      height: 100%;
+  }
+
+/* LOGO NAVBAR */
+
+
+  .logo{
+    margin-top: 2.5em;
+    position: relative;
+    margin-left: 1.7em;
+    display: flex;
+  }
+
+  .logo_up{
+    color: #fff;
+    margin-top: 15px;
+        font-size: 18px;
+        font-weight: 500;
+
+  }
+  .logo_dwn{
+    margin-top: 2.9em;
+    position: absolute;
+    left: 2.2em;
+    margin-left: 1.85em;
+  }
+  .logo::after {
+      position: absolute;
+      right: -20px;
+      top: 6px;
+      width: 38.526911934581186px;
+      border-radius: 0 026px;
+      height: 38.526911934581186px;
+      background: #212331;
+      background: #212331;
+      font-size: 14px;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      content: "";
+  }
+
+
+  /* profile menu */
+
+  .prof_menu{
+    margin-top: 2.5em;
+    position: relative;
+    margin-left: 1.7em;
+    display: flex;
+  }
+
+  .prof_menu_up{
+    color: #fff;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+
+  }
+  .prof_menu_dwn{
+    margin-top: 3.7em;
+    position: absolute;
+    left: 3em;
+    margin-left: 1.85em;
+  }
+
+
+
+
+
+
+
+
+
+  /* HOVER TEXTS LOGO AND OTHER */
+  .display_none{
+    display: none;
+  }
+
+
+  nz-slider{
+    max-width:230px;
+  }
+
+
+  /* ::after  =>  toogle icons */
+  .isOpen{
+    margin-top: -35px;
+    left: 190px;
+    position: absolute;
+    font-size: 16px;
+  }
+
+
+  .isClose{
+    margin-top: -34px;
+    left: 72px;
+    position: absolute;
+    font-size: 16px;
+}
+
+
+
+ .ant-menu {
+   font-size: 10.5px;
+ }
+ .ant-layout {
+   background: #f7fafc;
+}
